@@ -501,15 +501,16 @@ char *load_file(const char *fn)
     if (!f)
     {
         char path[1024];
-        snprintf(path, sizeof(path), "/usr/local/lib/zen/%s", fn);
+        snprintf(path, sizeof(path), "/usr/local/share/zenc/%s", fn);
         f = fopen(path, "rb");
     }
     if (!f)
     {
         char path[1024];
-        snprintf(path, sizeof(path), "/usr/lib/zen/%s", fn);
+        snprintf(path, sizeof(path), "/usr/share/zenc/%s", fn);
         f = fopen(path, "rb");
     }
+
     if (!f)
     {
         return 0;
